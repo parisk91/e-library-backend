@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: 'library-project-database'
+    environment:
+      - 'POSTGRES_DB=LibraryDatabase'
+      - 'POSTGRES_PASSWORD=lateral1991'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'

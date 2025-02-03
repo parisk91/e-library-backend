@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS users
+(
+    id NUMERIC PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL
+);
+
+ALTER TABLE users
+    ALTER COLUMN id TYPE NUMERIC;
+
+CREATE SEQUENCE users_id_seq;
+
+ALTER TABLE users
+    ALTER COLUMN id SET DEFAULT nextval('users_id_seq');
+
+SELECT setval('users_id_seq', COALESCE((SELECT MAX(id) FROM users)::BIGINT, 1));
+
+ALTER TABLE users ADD COLUMN role VARCHAR(50);
+
+ALTER TABLE users ADD COLUMN is_active BOOLEAN;
