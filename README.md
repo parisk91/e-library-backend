@@ -13,7 +13,7 @@ JWT: Security and authentication
 REST API: For communication with clients
 Database: PostgreSQL (environment:
     - 'POSTGRES_DB=LibraryDatabase'
-    - 'POSTGRES_PASSWORD=lateral1991'
+    - 'POSTGRES_PASSWORD='
     - 'POSTGRES_USER=postgres')
 
 **Prerequisites**
