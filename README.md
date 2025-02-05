@@ -12,9 +12,7 @@ Flyway: Database migration tool
 JWT: Security and authentication
 REST API: For communication with clients
 Database: PostgreSQL (environment:
-    - 'POSTGRES_DB=LibraryDatabase'
-    - 'POSTGRES_PASSWORD='
-    - 'POSTGRES_USER=postgres')
+    - 'POSTGRES_DB=LibraryDatabase')
 
 **Prerequisites**
 Docker and Docker Compose (container_name:library-project-database, ports: 5432:5432)
